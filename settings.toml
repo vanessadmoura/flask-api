@@ -1,0 +1,11 @@
+[default]
+SQLALCHEMY_DATABASE_URI = "sqlite:///db.sqlite"
+EXTENSIONS = [
+    "project.ext.database:init_app"
+]
+
+[development]
+DATABASE_URL = "sqlite:///db_development.sqlite"
+
+[production]
+DATABASE_URL = "sqlite:///db_development.sqlite"

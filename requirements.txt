@@ -1,2 +1,5 @@
 Flask
 flask-restx
+dynaconf==3.2.2
+Flask-Migrate==4.0.4
+Flask-SQLAlchemy==3.0.5
