@@ -1,6 +1,7 @@
 [default]
 SQLALCHEMY_DATABASE_URI = "sqlite:///db.sqlite"
 EXTENSIONS = [
+    "project.ext.restapi.__init__:init_app",
     "project.ext.database:init_app"
 ]
 
