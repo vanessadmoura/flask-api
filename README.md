@@ -10,4 +10,6 @@ Por outro lado, o MySQL usa um único processo para vários usuários. Como resu
 
 # Como rodar esse projeto
 
+export FLASK_APP=project.base
 export FLASK_ENV=development
+flask run

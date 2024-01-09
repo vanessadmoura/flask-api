@@ -19,9 +19,14 @@ def get_all_products():
 def post_product():
     dados = request.get_json()
     product = Product(**dados)
-    db.session.add(product)
-    db.session.commit()
-    return {"message": "Successfully created product"}, 201
+    if dados['value'] < 0:
+        return {"message": "You entered a negative value"}, 400
+    elif dados['name'].strip() == "":
+        return {"message": "You entered an empty value"}, 400
+    else:
+        db.session.add(product)
+        db.session.commit()
+        return {"message": "Successfully created product"}, 201
 
 
 def get_by_id(id):
